@@ -1,0 +1,36 @@
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Map App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon class="example-icon" aria-hidden="flase">add_alert</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon class="example-icon" aria-hidden="flase">account_circle</mat-icon>
+    </button>
+</mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+     <mat-nav-list style="width: 200px;">
+      <a mat-list-item routerLink='googlemap'>Google Map</a>
+      <a mat-list-item routerLink='heremap'>Here Map</a>  
+    <a mat-list-item routerLink='openstreetmap'>Open Street Map</a>
+    <a mat-list-item routerLink='wikimap'>Wikimedia Map</a>
+    
+    </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <p style="height: 88vh;">
+<router-outlet></router-outlet>
+      </p>
+      
+     
+    </mat-sidenav-content>
+    
+    
+  </mat-sidenav-container>
